@@ -44,6 +44,11 @@ form.addEventListener('submit', function(){
 const result = document.querySelector('#result');
 const lowOrHigh = document.querySelector('#lowOrHigh');
 const prevGuesses = document.querySelector('#prevGuesses');
+const livesDOM = document.querySelector('#lives span');
+const modalBg = document.querySelector('#modal-bg');
+
+ 
+let lives =10;
 
 
 
@@ -55,8 +60,11 @@ function checkCorrect(input){
         setGameOver();
     }
     else{
-
-
+        if(lives == 1)
+            setGameOver();
+        else{
+            wrongGuess(input);
+        }
     }
 }
 
@@ -64,9 +72,29 @@ function setGameOver(){
     slider.disabled = true;
     minus1.disabled = true;
     plus1.disabled = true;
+  
+    livesDOM.textContent = 'Correct number was '+randomNumber;
+
     // create a modal for reset button
+    modalBg.classList.add('modal-on');
 }
 
 function resetGame(){
+    modalBg.classList.remove('modal-on');
+    lives = 10;
+    slider.value = 50;
+    inputDisplay.textContent = 50;
+    slider.disabled = false;
+    minus1.disabled = false;
+    plus1.disabled = false;
 
 }
+
+function wrongGuess(input){
+    lives--;
+    livesDOM.textContent = lives;
+}
+
+//resetting game
+
+document.querySelector('#reset').addEventListener('click', resetGame);
