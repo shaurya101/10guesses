@@ -3,14 +3,49 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" link="style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <script src="script.js" defer></script>
     <title>10Guesses</title>
   </head>
   <body>
     <header>
-      <h1>10 Guesses</h1>
+      <h1>10 Guesses!!</h1>
+      <p>Use the hints to reach the hidden number. </p>
     </header>
+    <div>
+        <form action="#" id="form">
+          <label for="number">Enter your guess!</label>
+          <br>
+          <div>
+            <input type="range" min="0" max="100" step="1" id="slider">
+            <br>
+            <div id="arrowBtn">
+              <button id="minus1"><</button>
+              <button id="plus1">></button>
+            </div>
+            <br>
+            <h2 id="inputDisplay">50</h2>
+          </div>
+          <br>
+          <p id="lives">Lives Remaining : <span>10</span></p>
+          <button type="submit">Submit</button>
+        </form>
+        <section>
+          
+        </section>
+    </div>
+    <div id="results">
+      <p id="lowOrHi"></p>
+      <p id="result"></p>
+      <p id="prevGuesses"></p>
+    </div>
+
+    <div id="modal-bg">
+      <div id="modal">
+        
+      </div>
+    </div>
+
     
   </body>
 <html>
