@@ -42,7 +42,7 @@ form.addEventListener('submit', function(){
 // Selecting DOM elements for displaying respective result
 
 const result = document.querySelector('#result');
-const lowOrHigh = document.querySelector('#lowOrHigh');
+const lowOrHi = document.querySelector('#lowOrHi');
 const prevGuesses = document.querySelector('#prevGuesses');
 const livesDOM = document.querySelector('#lives span');
 const modalBg = document.querySelector('#modal-bg');
@@ -93,6 +93,13 @@ function resetGame(){
 function wrongGuess(input){
     lives--;
     livesDOM.textContent = lives;
+    if(input>randomNumber)
+       lowOrHi.textContent = 'Go Low';
+    else
+       lowOrHi.textContent = 'Go High';
+    prevGuesses.textContent = prevGuesses.textContent + ' ' + input;
+
+
 }
 
 //resetting game
