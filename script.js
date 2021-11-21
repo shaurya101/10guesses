@@ -57,6 +57,7 @@ const lowOrHi = document.querySelector('#lowOrHi');
 const prevGuesses = document.querySelector('#prevGuesses');
 const livesDOM = document.querySelector('#lives span');
 const modalBg = document.querySelector('#modal-bg');
+const newGame = document.querySelector('#newgame');
 
  
 let lives =10;
@@ -90,8 +91,15 @@ function setGameOver(){
     modalBg.classList.add('modal-on');
 }
 
+
+
+//resetting game
+
+document.querySelector('#reset').addEventListener('click', resetGame);
+
 function resetGame(){
     modalBg.classList.remove('modal-on');
+    randomNumber = Math.floor(Math.random()*100) + 1;
     lives = 10;
     slider.value = 50;
     livesDOM.textContent = 10;
@@ -104,6 +112,9 @@ function resetGame(){
 
 }
 
+
+// wrongGuess 
+
 function wrongGuess(input){
     lives--;
     livesDOM.textContent = lives;
@@ -115,7 +126,3 @@ function wrongGuess(input){
 
 
 }
-
-//resetting game
-
-document.querySelector('#reset').addEventListener('click', resetGame);
