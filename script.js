@@ -29,9 +29,20 @@ let randomNumber = Math.floor(Math.random()*100) + 1;
 
 // number input
 
+/* The following doesnt work because submit event fires upon clicking any buttons in form and we have two buttons (<>) which shouldnt submit 
+
 const form = document.querySelector('#form');
 
 form.addEventListener('submit', function(){
+    let input = Number(slider.value); // passing through Number constructor to make sure value is a number. type String --> Number here
+    checkCorrect(input);
+});
+
+*/
+
+const submit = document.querySelector('#submit');
+
+submit.addEventListener('click', function(){
     let input = Number(slider.value); // passing through Number constructor to make sure value is a number. type String --> Number here
     checkCorrect(input);
 });
@@ -85,6 +96,7 @@ function resetGame(){
     slider.value = 50;
     inputDisplay.textContent = 50;
     prevGuesses.textContent = '';
+    lowOrHi.textContent = '';
     slider.disabled = false;
     minus1.disabled = false;
     plus1.disabled = false;
