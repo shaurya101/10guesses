@@ -84,6 +84,7 @@ function resetGame(){
     lives = 10;
     slider.value = 50;
     inputDisplay.textContent = 50;
+    prevGuesses.textContent = '';
     slider.disabled = false;
     minus1.disabled = false;
     plus1.disabled = false;
