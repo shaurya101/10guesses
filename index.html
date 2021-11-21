@@ -10,11 +10,11 @@
   <body>
     <header>
       <h1>10 Guesses!!</h1>
-      <p>Use the hints to reach the hidden number. </p>
+      <p>Use 10 lives reach the hidden number by following the Low or High hints </p>
     </header>
     <div>
         <form action="#" id="form">
-          <label for="number">Enter your guess!</label>
+          <p id="lowOrHi">Enter your Guess!</p>
           <br>
           <div>
             <input type="range" min="0" max="100" step="1" id="slider">
@@ -35,13 +35,12 @@
         </section>
     </div>
     <div id="results">
-      <p id="lowOrHi"></p>
-      <p id="result"></p>
       <p id="prevGuesses"></p>
     </div>
 
     <div id="modal-bg" class="modal-bg">
       <div id="modal">
+        <p id="result">Correct number : <span></span></p>
         <button id="reset">New Game!</button>
       </div>
     </div>
