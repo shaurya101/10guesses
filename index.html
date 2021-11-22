@@ -10,24 +10,24 @@
   <body>
     <header>
       <h1>10 Guesses!!</h1>
-      <p>Use 10 lives reach the hidden number by following the Low or High hints </p>
+      <p class="para">Use 10 lives reach the hidden number by following the Low or High hints </p>
     </header>
     <div>
         <form action="#" id="form">
-          <p id="lowOrHi">Enter your Guess!</p>
+          <p id="lowOrHi" class="para">Enter your Guess!</p>
           <br>
           <div>
             <input type="range" min="0" max="100" step="1" id="slider">
             <br>
             <div id="arrowBtn">
-              <button id="minus1"><</button>
-              <button id="plus1">></button>
+              <button id="minus1"><p><</p></button>
+              <button id="plus1"><p>></p></button>
             </div>
             <br>
             <h2 id="inputDisplay">50</h2>
           </div>
           <br>
-          <p id="lives">Lives Remaining : <span>10</span></p>
+          <p id="lives" class="para">Lives Remaining : <span>10</span></p>
           <button type="submit" id="submit">Submit</button>
         </form>
         <section>
@@ -44,7 +44,5 @@
         <button id="reset">New Game!</button>
       </div>
     </div>
-
-    
   </body>
 <html>
