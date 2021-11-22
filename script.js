@@ -111,7 +111,6 @@ function resetGame(){
     minus1.disabled = false;
     plus1.disabled = false;
     submit.focus();
-
 }
 
 
