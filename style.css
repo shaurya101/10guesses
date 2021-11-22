@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
@@ -10,9 +13,23 @@ body{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    font-family: 'Monteserrat', sans-serif;
+    font-weight: 100;
+}
+header{
+    position: relative;
+    bottom: 10px;
 }
 h1{
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    position: relative;
+    bottom: 20px;
+}
+.para{
+    font-size: 20px;
+    
 }
 #form{
     min-height: 450px;
@@ -30,16 +47,29 @@ input[type='range']{
 }
 #minus1, #plus1{
     margin: 30px 20px 10px 20px;
-    font-size: 50px;
-    width: 50px;
+    font-size: 70px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: transparent;
+}
+#minus1 p, #plus1 p{
+    transform: translateY(-10%);
 }
 #inputDisplay{
-    font-size: 100px;
+    font-size: 150px;
 }
-
-
 #lives{
     
+}
+#submit{
+    height: 40px;
+    width: 80px;
+    border: 1px solid #000;
+    border-radius: 10%;
+    background-color: transparent;
+    margin-top: 20px;
 }
 #results{
     width: 100px;
