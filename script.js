@@ -41,6 +41,7 @@ form.addEventListener('submit', function(){
 */
 
 const submit = document.querySelector('#submit');
+submit.focus();
 
 submit.addEventListener('click', function(){
     let input = Number(slider.value); // passing through Number constructor to make sure value is a number. type String --> Number here
@@ -109,6 +110,7 @@ function resetGame(){
     slider.disabled = false;
     minus1.disabled = false;
     plus1.disabled = false;
+    submit.focus();
 
 }
 
