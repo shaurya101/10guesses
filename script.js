@@ -125,6 +125,5 @@ function wrongGuess(input){
     else
        lowOrHi.textContent = 'Go High!!';
     prevGuesses.textContent = prevGuesses.textContent + ' ' + input;
-
-
+    submit.focus();
 }
